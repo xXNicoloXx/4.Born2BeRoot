@@ -1,0 +1,54 @@
+PAR FEU:
+
+Par feu: 		UFW
+Par feu on:		UFW enable
+Par feu off:		UFW disable
+Par feu new port:	UFW allow [port]
+Par feu supp port:	UFW delete n port	
+
+
+
+
+USER:
+
+New user: 		useradd [nom]
+New groupe: 		groupadd [nom]
+User to groupe		addgroup [user] [group]
+
+Changer hostname	hostnamectl set-hostname server2						https://www.cyberciti.biz/faq/debian-change-hostname-permanently/
+Main group		sudo usermod -g [group] [user]
+changer username	sudo usermod -l [new][old]
+Changer home		sudo vim /etc/passwd
+
+
+
+MOT DE PASSE:
+
+Date mdp old		chage -M, chage -m, chage -W 							https://www.it-connect.fr/linux-forcer-le-changement-de-mot-de-passe-des-comptes/
+Date mdp new		/etc/login.defs 								https://www.redhat.com/sysadmin/password-expiration-date-linux
+Parametre mdp		/etc/pam.d/common-password							https://doc.ubuntu-fr.org/utilisateurs/bcag2/cracklib
+
+
+
+
+RESEAU:
+
+Change port ssh	vi /etc/ssh/sshd_config
+no root		PermitRootLogin no
+Address ip fix 	ip a / ip route show / /etc/resolv.conf					https://www.it-connect.fr/comment-configurer-une-adresse-ip-fixe-sur-debian-11/
+
+
+
+SUDO:
+
+
+tty 			Defaults requiretty								https://unix.stackexchange.com/questions/122616/why-do-i-need-a-tty-to-run-sudo-if-i-can-sudo-without-a-password
+text error 		Defaults badpass_message=""							https://unix.stackexchange.com/questions/684217/how-can-i-change-sudo-error-message-from-a-file
+log			Defaults logfile="/var/log/sudo/sudo.log"
+
+
+crontab -e
+lsblk
+ss -tunlp
+Diff entre les os	https://waytolearnx.com/2019/04/difference-entre-centos-et-debian.html
+

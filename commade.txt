@@ -1,0 +1,10 @@
+
+
+FDF 
+
+clear && gcc -g *.c -lmlx -lm -lXext -lX11 -I ./lib/minilibx-linux/ -L ./lib/minilibx-linux && ./a.out
+clear && gcc  *.c -I ./lib/minilibx_macos/ -L ./lib/minilibx_macos -lmlx -framework OpenGL -framework AppKit && ./a.out
+
+
+scan-build-12 make 									//vakgrind++
+//fprintf(stderr, "code %d\n", keycode);
