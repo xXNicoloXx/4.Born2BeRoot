@@ -7,4 +7,7 @@ clear && gcc  *.c -I ./lib/minilibx_macos/ -L ./lib/minilibx_macos -lmlx -framew
 
 
 scan-build-12 make 									//vakgrind++
+ncdu
+nm -u {BINAIRE}
+
 //fprintf(stderr, "code %d\n", keycode);
